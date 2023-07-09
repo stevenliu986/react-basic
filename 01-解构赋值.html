@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>解构赋值</title>
+
+</head>
+
+<body>
+  <h1>解构赋值</h1>
+  <script>
+    // 数组模型的解构
+    let [x, y, z] = [1, 2, 3]; // x=1, y=2, z=3
+
+    // 剩余运算符
+    let [l, ...m] = [4, 5, 6]; // l=4, m = [5,6]
+
+
+    // 对象的解构赋值
+    let a, b, c;
+    let obj = {
+      name: "John",
+      age: 18,
+      gender: "Male"
+    };
+    // 将name的值赋值给a, b和c同理
+    ({ name: a, age: b, gender: c } = obj);
+    // 如果变量名与属性名一致，则可以简写为
+    const { name, age, gender } = obj;
+    console.log(a, b, c);
+    console.log(name, age, gender)
+  </script>
+</body>
+
+</html>
