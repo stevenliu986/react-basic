@@ -1,0 +1,12 @@
+/* 首页模式 */
+/* 版心 */
+/* 设置整个网页居中的效果，同时设置宽度，宽度由设计稿决定
+必须要有宽度居中效果才能有效 */
+.wrapper {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+body {
+  background-color: #f3f5f7;
+}
