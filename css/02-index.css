@@ -7,6 +7,102 @@
   width: 1200px;
 }
 
+/* 该网页有三个大的区域：头部，banner以及网页的内容区 
+可以设置整个网页的背景色，即设置body的背景色*/
 body {
+  /* 颜色值由设计稿决定 */
   background-color: #f3f5f7;
+}
+
+/* 头部区域 */
+.header {
+  height: 100px;
+  background-color: #fff;
+}
+
+/* 使用flex使下级的4个div横向排列 */
+/* 因与顶部有间距，需使用padding-top，谁的大，就由谁来决定，
+这里是logo最大，所以由它来决定padding-top的值 */
+.header .wrapper {
+  display: flex;
+  padding-top: 29px;
+}
+
+/* a标签要更改显示方式（display: block），
+这样才能定义它的宽高，同时将字体的大小修改为0，
+这样，网页上就不可见了*/
+.logo a {
+  display: block;
+  width: 195px;
+  height: 41px;
+  background-image: url(../images/logo.png);
+  font-size: 0;
+}
+
+/* 导航 */
+.nav {
+  /* 与logo的间距 */
+  margin-left: 102px;
+}
+
+.nav ul {
+  display: flex;
+}
+
+.nav li {
+  margin-right: 24px;
+}
+
+/* 三个链接文字的垂直距离：在设计稿中有行高27px,  */
+.nav li a {
+  /* a是行内元素，需转为块级元素，
+  这样下面的padding中的上下内边距6px才能有效 */
+  display: block;
+  padding: 6px 8px;
+  line-height: 27px;
+  font-size: 19px;
+}
+
+.nav li .active {
+  border-bottom: 2px solid #00a4ff;
+}
+
+.nav li a:hover {
+  border-bottom: 2px solid #00a4ff;
+}
+
+/* 搜索 */
+.search {
+  width: 412px;
+  height: 40px;
+  /* flex布局侧轴默认是拉伸的 */
+  display: flex;
+  background-color: #f3f5f7;
+  border-radius: 20px;
+  margin-left: 64px;
+  padding-left: 19px;
+  padding-right: 12px;
+}
+
+.search input {
+  /* 来去除input的边框 */
+  border: none;
+  background-color: transparent;
+  /* outline来去除input的焦点边框 */
+  outline: none;
+  flex: 1;
+}
+
+/* ::placeholder选中就是placeholder属性文字样式 */
+.search input::placeholder {
+  font-size: 14px;
+  color: #999;
+}
+
+.search a {
+  align-self: center;
+  /* 这里a的宽高生效是因为它的父级使用了flex，使a变成了弹性盒子 */
+  width: 16px;
+  height: 16px;
+  background-image: url(../images/search.png);
 }

@@ -18,13 +18,20 @@
                  3. 控制图片，文字内容样式
   -->
   <!-- 头部区域 -->
+  <!-- 标签结构：通栏(.header)>版心(.wrapper)>logo + 导航 + 搜索 + 用户 -->
   <div class="header">
     <div class="wrapper">
       <!-- logo -->
+      <!-- logo功能：单击跳转到首页，SEO: 提升网站排名
+      实现方法：h1 > a > 网站名称（搜索关键字）
+      -->
       <div class="logo">
         <h1><a href="#">学成在线</a></h1>
       </div>
       <!-- 导航 -->
+      <!-- 导航功能：单击跳转到页面
+            实现方法：ul > li > a，避免堆砌a标签，网站搜索排名降级
+      -->
       <div class="nav">
         <ul>
           <li><a href="#" class="active">首页</a></li>
