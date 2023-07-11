@@ -106,3 +106,28 @@ body {
   height: 16px;
   background-image: url(../images/search.png);
 }
+
+/* banner区域 */
+.banner {
+  height: 420px;
+  background-color: #0092cb;
+}
+
+.banner .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 侧导航 */
+/* 侧导航的宽高由设计稿给出 */
+.banner .left {
+  padding: 3px 20px;
+  width: 191px;
+  height: 420px;
+  background-color: rgba(0, 0, 0, 0.42);
+}
+
+.banner li a {
+  line-height: 16px;
+}
