@@ -129,5 +129,14 @@ body {
 }
 
 .banner li a {
-  line-height: 16px;
+  display: block;
+  height: 46px;
+  line-height: 46px;
+  background: url(../images/right.png) no-repeat right center;
+  color: #fff;
+}
+
+.banner li a:hover {
+  color: #00a4ff;
+  background: url(../images/right-hover.png) no-repeat right center;
 }
